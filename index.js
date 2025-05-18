@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-app.get('/hello', (req, res) => {
+app.get('/daley', (req, res) => {
   const delay = parseInt(req.query.delay) || 0;
   console.log(`Received request, delaying by ${delay}ms`);
   setTimeout(() => {
