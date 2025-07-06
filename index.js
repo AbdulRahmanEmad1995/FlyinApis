@@ -47,4 +47,4 @@ async function callZohoFunction() {
 
 console.log("⏳ Starting 20s loop to call Zoho API...");
 callZohoFunction();
-setInterval(callZohoFunction, 10 * 1000);
+setInterval(callZohoFunction, 20 * 1000);
