@@ -58,3 +58,13 @@ async function runZohoSyncSurveys() {
 // callZohoFunction();
 setInterval(callZohoFunction, 20 * 1000);
 setInterval(runZohoSyncSurveys, 5 * 1000);
+
+// Add this route to your index.js
+app.get('/myip', async (req, res) => {
+  try {
+    const response = await axios.get('https://api.ipify.org?format=json');
+    res.json({ ip: response.data.ip });
+  } catch (err) {
+    res.status(500).json({ error: 'Could not fetch IP' });
+  }
+});
