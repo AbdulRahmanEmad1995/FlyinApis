@@ -57,7 +57,7 @@ async function runZohoSyncSurveys() {
 
 // callZohoFunction();
 setInterval(callZohoFunction, 20 * 1000);
-setInterval(runZohoSyncSurveys, 5 * 1000);
+setInterval(runZohoSyncSurveys, 20 * 1000);
 
 // Add this route to your index.js
 app.get('/myip', async (req, res) => {
