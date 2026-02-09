@@ -1,10 +1,7 @@
 const express = require('express');
 const connectDB = require('./Server_Connection');
 const ZohoSyncSurveys = require('./ZohoSyncSurveys');
-<<<<<<< HEAD
 const CheckOflineSalesIQ = require('./CheckOflineSalesIQ');
-=======
->>>>>>> e819b04a8ff89e1c4ef4f7b322d422b0b230251d
 const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -55,22 +52,17 @@ async function callZohoFunction() {
   }
   console.log("⏳ Starting 20s loop to call Zoho API...");
 }
-<<<<<<< HEAD
 
-=======
 async function runZohoSyncSurveys() { 
   const zohosync = await ZohoSyncSurveys();
 }
->>>>>>> e819b04a8ff89e1c4ef4f7b322d422b0b230251d
-
 // callZohoFunction();
 setInterval(callZohoFunction, 20 * 1000);
 //setInterval(runZohoSyncSurveys, 20 * 1000);
-<<<<<<< HEAD
+
 setInterval(CheckOflineSalesIQ, 120 * 1000);
 
-=======
->>>>>>> e819b04a8ff89e1c4ef4f7b322d422b0b230251d
+
 
 // Add this route to your index.js
 app.get('/myip', async (req, res) => {
